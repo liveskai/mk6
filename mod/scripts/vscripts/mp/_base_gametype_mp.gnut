@@ -22,7 +22,7 @@ global function TitanPlayerHotDropsIntoLevel
 global function SetRecalculateRespawnAsTitanStartPointCallback
 
 struct {
-	bool killcamsEnabled = true
+	bool killcamsEnabled = false
 	bool playerDeathsHidden = false
 	int titanDamageGameStat = -1
 
