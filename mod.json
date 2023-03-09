@@ -10,10 +10,10 @@
     "RequiredOnClient": false,
     "Scripts": [
         {
-            "Path": "smart_pistol_ffa.nut",
+            "Path": "sonar.nut",
             "RunOn": "SERVER && MP",
             "ServerCallback": {
-                "After": "SmartPistolFFA_Init"
+                "After": "sonar_Init"
             }
         }
     ]
