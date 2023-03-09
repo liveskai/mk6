@@ -1,0 +1,11 @@
+WeaponData
+{
+	mods
+	{
+		og_pilot
+		{
+			"damage_near_value"   							"1"
+			"damage_far_value"								"1"			
+		}
+	}
+}
