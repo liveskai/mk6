@@ -1,11 +1,7 @@
 WeaponData
 {
-	mods
+	MP_BASE
 	{
-		og_pilot
-		{
-			"damage_near_value"   							"1"
-			"damage_far_value"								"1"			
-		}
+	"ammo_no_remove_from_stockpile"					"1"
 	}
 }
