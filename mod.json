@@ -5,7 +5,7 @@
     "Contacts": [
         "DINO#9644 (Discord)"
     ],
-    "LoadPriority": 1,
+    "LoadPriority": 99,
     "Version": "1.7.0",
     "RequiredOnClient": false,
     "Scripts": [
