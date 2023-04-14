@@ -5,10 +5,17 @@
     "Contacts": [
         "DINO#9644 (Discord)"
     ],
-    "LoadPriority": 101,
+    "LoadPriority": 1,
     "Version": "1.7.0",
     "RequiredOnClient": false,
     "Scripts": [
+        {
+            "Path": "smart_pistol_ffa.nut",
+            "RunOn": "SERVER && MP",
+            "ServerCallback": {
+                "After": "SmartPistolFFA_Init"
+            }
+        },
         {
             "Path": "sonar.nut",
             "RunOn": "SERVER && MP",
