@@ -10,7 +10,7 @@ void function OnPlayerRespawned( entity player )
 	foreach ( entity weapon in player.GetMainWeapons() )
 		player.TakeWeaponNow( weapon.GetWeaponClassName() )
 
-	player.GiveWeapon( "mp_weapon_smart_pistol")
+	player.GiveWeapon( "mp_weapon_smart_pistol",["og_pilot"])
 }
 
 void function OnPlayerChangeLoadout( entity player , PilotLoadoutDef p)
@@ -18,5 +18,5 @@ void function OnPlayerChangeLoadout( entity player , PilotLoadoutDef p)
 	foreach ( entity weapon in player.GetMainWeapons() )
 		player.TakeWeaponNow( weapon.GetWeaponClassName() )
 
-	player.GiveWeapon( "mp_weapon_smart_pistol")
+	player.GiveWeapon( "mp_weapon_smart_pistol",["og_pilot"])
 }
