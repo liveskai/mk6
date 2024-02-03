@@ -10,13 +10,6 @@
             "ServerCallback": {
                 "After": "SmartPistolFFA_Init"
             }
-        },
-        {
-            "Path": "sonar.nut",
-            "RunOn": "SERVER && MP",
-            "ServerCallback": {
-                "After": "sonar_Init"
-            }
         }
     ]
 }
