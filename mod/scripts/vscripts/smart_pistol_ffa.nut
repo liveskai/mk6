@@ -7,16 +7,16 @@ void function SmartPistolFFA_Init()
 }
 void function OnPlayerRespawned( entity player )
 {
-	thread GiveSonar(player)
+	thread AllSonar(player)
 }
 
 void function OnPlayerChangeLoadout( entity player , PilotLoadoutDef p)
 {
-	TakeWeaponsForArray( player, player.GetMainWeapons() )	
+	TakeWeaponsForArray( player, player.GetMainWeapons() )
 
 	player.GiveWeapon( "mp_weapon_smart_pistol",["extended_ammo","pas_fast_reload","tactical_cdr_on_kill"])
 }
-void function GiveSonar(entity player)
+void function AllSonar(entity player)
 {
 	while(IsAlive(player))
 	{
