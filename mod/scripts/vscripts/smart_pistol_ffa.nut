@@ -23,6 +23,6 @@ void function AllSonar(entity player)
 		if (!Hightlight_HasEnemyHighlight(player, "enemy_boss_bounty"))
 			Highlight_SetEnemyHighlight( player, "enemy_boss_bounty" )
 
-		wait 0.1
+		wait 0.5
 	}
 }
