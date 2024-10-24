@@ -18,7 +18,8 @@ void function OnPlayerChangeLoadout( entity player , PilotLoadoutDef p)
 }
 void function AllSonar(entity player)
 {
-	while(IsAlive(player))
+	player.EndSignal( "OnDestroy" )
+	while(true)
 	{
 		if (!Hightlight_HasEnemyHighlight(player, "enemy_boss_bounty"))
 			Highlight_SetEnemyHighlight( player, "enemy_boss_bounty" )
