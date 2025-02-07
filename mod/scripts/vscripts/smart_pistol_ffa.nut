@@ -7,6 +7,7 @@ void function SmartPistolFFA_Init()
 }
 void function OnPlayerRespawned( entity player )
 {
+	ResetPlayerCooldowns( player )
 	thread AllSonar(player)
 }
 
@@ -19,6 +20,7 @@ void function OnPlayerChangeLoadout( entity player , PilotLoadoutDef p)
 void function AllSonar(entity player)
 {
 	player.EndSignal( "OnDestroy" )
+	player.EndSignal( "OnDeath" )
 	while(true)
 	{
 		if (!Hightlight_HasEnemyHighlight(player, "enemy_boss_bounty"))
