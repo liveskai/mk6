@@ -14,8 +14,8 @@ void function OnPlayerRespawned( entity player )
 void function OnPlayerChangeLoadout( entity player , PilotLoadoutDef p)
 {
 	TakeWeaponsForArray( player, player.GetMainWeapons() )
-
 	player.GiveWeapon( "mp_weapon_smart_pistol",["extended_ammo","pas_fast_reload","tactical_cdr_on_kill"])
+	player.TakeWeapon("mp_ability_cloak")
 }
 void function AllSonar(entity player)
 {
