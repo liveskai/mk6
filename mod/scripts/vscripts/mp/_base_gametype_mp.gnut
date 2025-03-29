@@ -54,7 +54,7 @@ void function BaseGametype_Init_MPSP()
 void function TextKillCams( entity player, var damageInfo )
 {
 	if(player.GetPlayerGameStat(PGS_DEATHS)<4)
-		SendHudMessage( player, "控制台输入 \n【on】:开启击杀回放 \n 【off】:关闭击杀回放", -1, 0.4, 255, 255, 255, 255, 0.15, 3.0, 0.5 )
+		SendHudMessage( player, "控制台输入\n【on】:开启击杀回放\n【off】:关闭击杀回放", -1, 0.4, 255, 255, 255, 255, 0.15, 3.0, 0.5 )
 }
 void function OnPlayerConnected( entity player )
 {
