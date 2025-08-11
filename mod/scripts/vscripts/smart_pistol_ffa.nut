@@ -2,24 +2,25 @@ global function SmartPistolFFA_Init
 
 void function SmartPistolFFA_Init()
 {
-	AddCallback_OnPlayerRespawned( OnPlayerRespawned )
+	AddCallback_OnClientConnected( OnPlayerConnected )
 	AddCallback_OnPlayerGetsNewPilotLoadout( OnPlayerChangeLoadout)
 }
-void function OnPlayerRespawned( entity player )
+void function OnPlayerConnected( entity player )
 {
 	thread AllSonar(player)
-	ResetPlayerCooldowns( player )
 }
 
 void function OnPlayerChangeLoadout( entity player , PilotLoadoutDef pilot )
 {
+	ResetPlayerCooldowns( player )
 	player.TakeWeapon("mp_ability_cloak")
 	TakeWeaponsForArray( player, player.GetMainWeapons() )
 	player.GiveWeapon( "mp_weapon_smart_pistol",["extended_ammo","pas_fast_reload","tactical_cdr_on_kill"])
 }
 void function AllSonar(entity player)
 {
-	while(IsAlive(player))
+	player.EndSignal( "OnDestroy" )
+	for(;;)
 	{
 		if (!Hightlight_HasEnemyHighlight(player, "enemy_boss_bounty"))
 			Highlight_SetEnemyHighlight( player, "enemy_boss_bounty" )
