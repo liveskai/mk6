@@ -22,8 +22,6 @@ void function AllSonar(entity player)
 	player.EndSignal( "OnDestroy" )
 	for(;;)
 	{
-		while(Hightlight_HasEnemyHighlight(player, "enemy_boss_bounty"))
-			wait 1
 		Highlight_SetEnemyHighlight( player, "enemy_boss_bounty" )
 		wait 0.5
 	}
